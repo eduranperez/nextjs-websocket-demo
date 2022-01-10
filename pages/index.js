@@ -120,7 +120,7 @@ export default function WebSocketDemo(){
     setSocketUrl('wss://70v6q0ruz1.execute-api.us-west-2.amazonaws.com/Prod'), []);
 
   const handleClickSendMessage = useCallback(() =>
-    sendMessage(JSON.stringify({ action: "sendmessage", data: "hello world" })), []);
+    sendMessage(JSON.stringify({ action: "sendmessage", data: {message: "hello world", userId: "eduranperez@ucdavis.edu"} })), []);
 
   const connectionStatus = {
     [ReadyState.CONNECTING]: 'Connecting',
